@@ -1,0 +1,10 @@
+django
+djangorestframework
+django-jsonfield
+django-jsonfield-backport
+django-unixtimestampfield
+django-cors-headers
+hexdump
+Crypto
+pycrypto
+

@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* Month view */
+/* .rbc-day-bg {
+  background-color: grey;
+  border-color: red !important;
+}
+.rbc-month-row {
+  border-top: 1px solid red !important;
+}
+.rbc-today {
+  background-color: white !important;
+  color: black !important;
+} */
+
+
+
+/* Day  view */
+/* .rbc-timeslot-group {
+  background-color: #2C2C2C;
+  border-bottom: .5px solid #BCBCBC !important;
+  color: #7F6C01;
+}
+
+.rbc-time-slot {
+  border-top: .5px solid #BCBCBC !important;
+}
+
+
+.rbc-toolbar {
+  background-color: #2C2C2C;
+  color: #7F6C01;
+  border-color: #BCBCBC;
+}
+
+.rbc-time-header {
+  background-color: #2C2C2C;
+  color: #7F6C01 !important;
+
+  border-color: #BCBCBC;
+}
+
+.rbc-addons-dnd-row-body {
+  background-color: #2C2C2C;
+  color: #7F6C01;
+  border-color: #BCBCBC;
+}
+
+
+.rbc-btn-group {
+  background-color: #2C2C2C;
+  color: #7F6C01 !important;
+
+  border-color: #BCBCBC;
+} */
