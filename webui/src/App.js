@@ -167,48 +167,6 @@ const updateActivity = (obj) => {
 
 }
 
-const getActivities = () => {
-
-  const requestOptions = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-
-  };
-  return new Promise ((resolve, reject) => {
-
-    fetch(BACKEND_URL + '/activity/?format=json', requestOptions)
-        .then( (response) => {
-          if ([200, 204].includes(response.status)){
-            return response.json()
-          }else {
-            return false;
-          }
-
-        }).then((data) => {
-
-          if (data){
-            resolve(data);
-
-
-          //Fix this
-          }else {
-            reject({error: "invalid response recieved"})
-          }
-
-
-        //Network / socket related errors
-        }).catch ((errmsg) => {
-
-          // this.setState({error: errmsg.toString() });
-          reject({error: errmsg.toString() });
-        });
-
-  });
-
-}
-
 const deleteActivity = (id) => {
   const requestOptions = {
       method: 'DELETE',
@@ -735,59 +693,6 @@ function Activities(props)
 
 }
 
-
-// const AgentContext = React.createContext();
-// const UserContext = React.createContext();
-// const GroupContext = React.createContext();
-// const CompilationContext = React.createContext();
-// const SessionUserContext = React.createContext();
-
-
-const getCounts = () => {
-
-
-
-  const requestOptions = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-
-  };
-
-  return new Promise ((resolve, reject) => {
-    fetch(BACKEND_URL + '/count/?format=json', requestOptions)
-        .then( (response) => {
-          if ([200, 204].includes(response.status)){
-            return response.json()
-          }else {
-            return false;
-          }
-
-        }).then((data) => {
-
-          if (data){
-            resolve(data);
-
-
-          //Fix this
-          }else {
-            reject({error: "invalid response recieved"})
-          }
-
-
-        //Network / socket related errors
-        }).catch ((errmsg) => {
-
-          // this.setState({error: errmsg.toString() });
-          reject({error: errmsg.toString() });
-        });
-
-  });
-
-
-
-}
 const updateCount = (obj) => {
   delete obj["timeScaleIsShown"];
   const requestOptions = {
@@ -1929,94 +1834,6 @@ function Times(props)
 
 
 }
-
-
-
-const getTimes = () => {
-  const requestOptions = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-
-  };
-
-  return new Promise ((resolve, reject) => {
-    fetch(BACKEND_URL + '/time/?format=json', requestOptions)
-        .then( (response) => {
-          if ([200, 204].includes(response.status)){
-            return response.json()
-          }else {
-            return false;
-          }
-
-        }).then((data) => {
-
-          if (data){
-            resolve(data);
-
-
-          //Fix this
-          }else {
-            reject({error: "invalid response recieved"})
-          }
-
-
-        //Network / socket related errors
-        }).catch ((errmsg) => {
-
-          // this.setState({error: errmsg.toString() });
-          reject({error: errmsg.toString() });
-        });
-
-  });
-
-
-
-}
-
-
-const getScales = () => {
-  const requestOptions = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-
-  };
-
-  return new Promise ((resolve, reject) => {
-    fetch(BACKEND_URL + '/scale/?format=json', requestOptions)
-        .then( (response) => {
-          if ([200, 204].includes(response.status)){
-            return response.json()
-          }else {
-            return false;
-          }
-        }).then((data) => {
-
-          if (data){
-            resolve(data);
-
-
-          //Fix this
-          }else {
-            reject({error: "invalid response recieved"})
-          }
-
-
-        //Network / socket related errors
-        }).catch ((errmsg) => {
-
-          // this.setState({error: errmsg.toString() });
-          reject({error: errmsg.toString() });
-        });
-
-  });
-
-
-}
-
 
 
 const updateScale = (obj) => {
@@ -3644,15 +3461,29 @@ function TimeEditor(props){
   )
 }
 
+        //
+        //   if ([200, 204].includes(response.status)){
+        //     return response.json()
+        //   }else {
+        //     return false;
+        //   }
+        //
+        // }).then((data) => {
+        //
+        //   if (data){
+        //     resolve(data);
+        //
+        //
+        //   //Fix this
+        //   }else {
+        //     reject({error: "invalid response recieved"})
+        //   }
+        //
+        //
 
 
 
-
-
-const getDays = async () => {
-
-
-
+const httpGet = async (url) => {
   const requestOptions = {
       method: 'GET',
       headers: {
@@ -3662,35 +3493,39 @@ const getDays = async () => {
   };
 
   return new Promise ((resolve, reject) => {
-    fetch(BACKEND_URL + '/day/?format=json', requestOptions)
+    fetch(url + '?format=json', requestOptions)
         .then( (response) => {
-          if ([200, 204].includes(response.status)){
-            return response.json()
-          }else {
-            return false;
-          }
-
-        }).then((data) => {
-
-          if (data){
-            resolve(data);
-
-
-          //Fix this
-          }else {
-            reject({error: "invalid response recieved"})
-          }
-
+            if ([200, 204].includes(response.status)){
+                response.json().then((data) => {
+                    resolve(data);
+                })
+            }else {
+                reject({error: "Bad response: " + response.status})
+            }
 
         //Network / socket related errors
         }).catch ((errmsg) => {
-
-          // this.setState({error: errmsg.toString() });
           reject({error: errmsg.toString() });
         });
 
   });
 
+
+  
+
+}
+
+const httpPost = async (url, data) => {
+
+}
+
+const httpPut = async (url, data) => {
+
+}
+
+
+const httpDelete = async (url) => {
+    
 }
 
 function swap(arr,xp, yp)
@@ -3779,7 +3614,6 @@ function Dashboard(props){
   */
 
   useEffect(() => {
-
 
 
     let activityData = [];
@@ -4352,97 +4186,6 @@ function Journals(props){
   )
 }
 
-
-function getJournals(){
-    const requestOptions = {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-
-    };
-
-    return new Promise ((resolve, reject) => {
-      fetch(BACKEND_URL + '/journal/?format=json', requestOptions)
-          .then( (response) => {
-            if ([200, 204].includes(response.status)){
-              return response.json()
-            }else {
-              return false;
-            }
-
-          }).then((data) => {
-
-            if (data){
-              resolve(data);
-
-
-            //Fix this
-            }else {
-              reject({error: "invalid response recieved"})
-            }
-
-
-          //Network / socket related errors
-          }).catch ((errmsg) => {
-
-            // this.setState({error: errmsg.toString() });
-            reject({error: errmsg.toString() });
-          });
-
-    });
-
-
-
-
-}
-
-
-function getJournalEntries(){
-    const requestOptions = {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-
-    };
-
-    return new Promise ((resolve, reject) => {
-      fetch(BACKEND_URL + '/journal_entry/?format=json', requestOptions)
-          .then( (response) => {
-            if ([200, 204].includes(response.status)){
-              return response.json()
-            }else {
-              return false;
-            }
-
-          }).then((data) => {
-
-            if (data){
-              resolve(data);
-
-
-            //Fix this
-            }else {
-              reject({error: "invalid response recieved"})
-            }
-
-
-          //Network / socket related errors
-          }).catch ((errmsg) => {
-
-            // this.setState({error: errmsg.toString() });
-            reject({error: errmsg.toString() });
-          });
-
-    });
-
-
-
-
-}
-
-
 function App() {
 
   const forceUpdate = useForceUpdate();
@@ -4455,46 +4198,21 @@ function App() {
   const [journalEntries, setJournalEntries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-
-  useEffect(( ) => {
-
-    getActivities().then((data) => {
-      setActivities(data);
-
-      getCounts().then((countData) => {
-        setCounts(countData);
-
-        getTimes().then((timeData) => {
-          setTimes(timeData);
-
-          getScales().then((scaleData) => {
-            setScales(scaleData);
-
-            getDays().then((dayData) => {
-              setDays(dayData);
-
-              getJournals().then((journalData) => {
-                setJournals(journalData);
-
-                getJournalEntries().then((journalEntryData) => {
-                  setJournalEntries(journalEntryData);
-                  setIsLoading(false);
-
-                })
-
-              })
-
-
-            })
-
-          })
-
-        })
-
-      })
-
-
-    })
+  
+  useEffect(() => {
+    
+    async function setData(){
+         await httpGet(BACKEND_URL + "/activity/").then(data => setActivities(data) );
+         await httpGet(BACKEND_URL + "/count/").then(data => setCounts(data));
+         await httpGet(BACKEND_URL + "/time/").then(data => setTimes(data));
+         await httpGet(BACKEND_URL + "/scale/").then(data => setScales(data));
+         await httpGet(BACKEND_URL + "/day/").then(data => setDays(data));  
+         await httpGet(BACKEND_URL + "/journal/").then(data => setJournals(data));
+         await httpGet(BACKEND_URL + "/journal_entry/").then(data => setJournalEntries(data));
+         setIsLoading(false);
+    };
+     
+    setData();
 
   }, []);
 
