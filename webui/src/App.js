@@ -68,9 +68,18 @@ import { TimeSeries, TimeRange } from "pondjs";
 /*
 
 
-- View for adding, deleting and changing actions, times, scales and counts.
-- View for filling in a day
-- Basic dashboard
+
+REFACTOR 1#:
+
+0. Rewrite and oversee the fetch calls
+1. Group project by pages, with related contexts in the same files.
+2. Go through and simplify the code
+3. Store all the web reources locally
+4. Shove it into an electron app (?)
+
+
+
+
 
 */
 
@@ -1442,10 +1451,12 @@ function Times(props)
           }else {
             hour = `${h}`;
           }
-
+            
+          //remove this 
           if (m == 0){
             minute = "00";
           }
+
           if (m < 10){
             minute = `0${m}`;
           }else {
