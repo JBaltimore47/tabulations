@@ -23,7 +23,7 @@ on the activity everyday or if the activity is a negative activity, how much tim
 
 Checklists
 ---
-Ever had a goal to do 20 pushups everyday? Or maybe you wanted to read 20 pages every day, regardless the point here is to allow a neat way for you to set up and report on those checklists.  
+Ever had a goal to do 20 pushups everyday? Or maybe you wanted to read 20 pages every day, regardless the point here is to provide a neat way for you to set up and report on those checklists.  
 
 ![day_view](https://github.com/JBaltimore47/tabulations/assets/139618954/904ef15f-9193-478c-90da-10a6da2d0051)
 
