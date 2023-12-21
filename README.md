@@ -57,8 +57,7 @@ Info
 This tool is written in Django rest framework and React. 
 It only stores data locally in a sqlite3.db file, this is one of the reasons i made this, because trusting a corporation that might've already made a product like this, with this kind of personal information, is a no-go for me.
 I primarily wrote this tool for my own use, so i am only adding new functionalities as i recognize the need for them in my own life, feel free to fork the repo or contact me if you want to contribute to a better product. 
-As it stands, the code isn't pretty, there a some bugs and a lot of functionality is missing, so i'm sorry if you're planning on reading and understanding it. The main functionality works as intended
-which is all i need.
+As it stands, the code isn't pretty, there are bugs and a lot of functionality is missing, so i'm sorry if you're planning on reading and understanding it. The main functionality works as intended, which is personally all i need. But i wouldn't say no if someone wanted to swoop in and fix some things.
 
 What i think is nice about this tool is a) you have full control over all activities and checklists, nothing is generic, and b) that you can use utilize only the parts of the tool you want. If you only want to report time and have a checklist, that's fine.
 
