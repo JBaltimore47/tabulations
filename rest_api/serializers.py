@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Activity, Time, Count, Scale, Day, Journal, JournalEntry
+from .models import Activity, Time, Count, Scale, Day, Journal, JournalEntry, Checklist
 
 
 
@@ -30,6 +30,13 @@ class ScaleSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class ChecklistSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Checklist
+        fields = '__all__'
+
+
+
 class DaySerializer(serializers.ModelSerializer):
     class Meta:
         model = Day
@@ -43,4 +50,4 @@ class JournalSerializer(serializers.ModelSerializer):
 class JournalEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = JournalEntry
-        fields = '__all__'
+        fields = ['id','detached', 'journal_pk', 'content', 'created_at', 'title']

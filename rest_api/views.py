@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from .models import Activity, Time, Count, Scale, Day, Journal, JournalEntry
-from .serializers import ActivitySerializer, TimeSerializer, CountSerializer, ScaleSerializer, DaySerializer, JournalSerializer, JournalEntrySerializer
+from .models import Activity, Time, Count, Scale, Day, Journal, JournalEntry, Checklist
+from .serializers import ActivitySerializer, TimeSerializer, CountSerializer, ScaleSerializer, DaySerializer, JournalSerializer, JournalEntrySerializer, ChecklistSerializer
 
 # Create your views here.
 
@@ -42,6 +42,12 @@ class ScaleViewSet(viewsets.ModelViewSet):
 
     serializer_class = ScaleSerializer
     queryset = Scale.objects.all()
+
+
+class ChecklistViewSet(viewsets.ModelViewSet):
+
+    serializer_class = ChecklistSerializer
+    queryset = Checklist.objects.all()
 
 
 class DayViewSet(viewsets.ModelViewSet):

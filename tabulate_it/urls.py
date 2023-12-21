@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from rest_api.views import ActivityViewSet, TimeViewSet, CountViewSet, ScaleViewSet, DayViewSet, JournalViewSet, JournalEntryViewSet
+from rest_api.views import ActivityViewSet, TimeViewSet, CountViewSet, ScaleViewSet, DayViewSet, JournalViewSet, JournalEntryViewSet, ChecklistViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
@@ -23,6 +23,7 @@ router.register(r'activity', ActivityViewSet, basename='activity')
 router.register(r'time', TimeViewSet, basename='time')
 router.register(r'count', CountViewSet, basename='count')
 router.register(r'scale', ScaleViewSet, basename='scale')
+router.register(r'checklist', ChecklistViewSet, basename='checklist')
 router.register(r'day', DayViewSet, basename='day')
 router.register(r'journal', JournalViewSet, basename='journal')
 router.register(r'journal_entry', JournalEntryViewSet, basename='journal_entry')

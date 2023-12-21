@@ -1,7 +1,7 @@
 from django.db import models
 from unixtimestampfield.fields import UnixTimeStampField
 from django_jsonfield_backport.models import JSONField
-
+from datetime import datetime
 
 # Create your models here.
 class Activity(models.Model):
@@ -39,6 +39,12 @@ class Scale(models.Model):
 
 
 
+class Checklist(models.Model):
+    name = models.CharField(max_length=256)
+    description = models.CharField(max_length=512)
+    active = models.BooleanField()
+
+
 
 class Day(models.Model):
     date = models.CharField(max_length=10, unique=True)          #dd/mm/yyyy
@@ -46,6 +52,17 @@ class Day(models.Model):
     times = JSONField()
     counts = JSONField()
     scales = JSONField()
+    checklists = JSONField();
+
+
+
+class Phase(models.Model):
+    started_at = UnixTimeStampField(null=True, use_numeric=True, default=0.0)
+    ended_at = UnixTimeStampField(null=True, use_numeric=True, default=0.0)
+    quotes = models.JSONField()
+    maxims = models.JSONField()
+    prologue = models.IntegerField() # JournalEntry prologue
+    epilogue = models.IntegerField() # JournalEntry epilogue
 
 
 
@@ -66,6 +83,8 @@ class Journal(models.Model):
     page_count = models.IntegerField()
 
 class JournalEntry(models.Model):
+    title = models.CharField(max_length=2048)
+    detached = models.BooleanField(default=False)
     journal_pk = models.IntegerField()
-    created_at = UnixTimeStampField(null=True, use_numeric=True, default=0.0)
-    content = models.CharField(max_length=16392)
+    created_at = UnixTimeStampField(null=True, use_numeric=True, default=datetime.now().timestamp())
+    content = models.JSONField()

@@ -5,9 +5,9 @@ RUN apt upgrade -y
 
 
 
-#Install Nodejs 16
+#Install Nodejs 18
 RUN apt install curl -y
-RUN sh -c "curl -sL https://deb.nodesource.com/setup_16.x | bash -"
+RUN sh -c "curl -sL https://deb.nodesource.com/setup_18.x | bash -"
 RUN apt install nodejs -y 
 
 
