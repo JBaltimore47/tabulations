@@ -13,8 +13,8 @@ The point here is to be able to report and then later visualize how exactly you 
 In this day and age, it's extremely easy to waste time, one minute your taking a break from your studying and the next you've scrolled Youtube for 3 hours. 
 And that's the point of this tool, to keep yourself accountable and know exactly how you spend your time, and as a secondary side-effect: you don't want to report the fact that you threw away 3 hours doing exactly nothing, so this tool might make you less likely to do it. 
 
-The time reporting works by you configuring your own activities, you can specify a number of different parameters for a newly configured activity such as the amount of time that you'd __prefer__ to spend
-on the activity everyday or if the activity is a negative activity, how much time is the __maximum__ you want to spend on it each day. 
+The time reporting works by you configuring your own activities, you can specify a number of different parameters for a newly configured activity such as the amount of time that you'd _prefer_ to spend
+on the activity everyday or if the activity is a negative activity, how much time is the _maximum_ you want to spend on it each day. 
 
 ![time_editor](https://github.com/JBaltimore47/tabulations/assets/139618954/fcd5b3a9-d199-4d03-8818-c5d6794b74fb)
 
@@ -44,10 +44,11 @@ Journals
 ---
 Are you like me and hate writing shit down using a pen and paper, and would rather have all of your journals in one digital location that you can easily backup. This allows you to create journals, add entries to those journals, and visualize all of your entries with a good looking timeline. 
 
-Entries of a specific journal
-![journal_timeline](https://github.com/JBaltimore47/tabulations/assets/139618954/3b466bf0-9cb8-4ad7-ba7c-a7f947bdded4)
+_Entries of a specific journal_
+![journal_timeline_2](https://github.com/JBaltimore47/tabulations/assets/139618954/703e66b7-f561-4391-bc1d-8faf1be4a16a)
 
-Edit journal entry
+
+_Edit journal entry_
 ![journal_view](https://github.com/JBaltimore47/tabulations/assets/139618954/e5b88e50-7346-4197-be28-658d32508d8d)
 
  
