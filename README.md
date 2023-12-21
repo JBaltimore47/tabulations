@@ -16,6 +16,8 @@ And that's the point of this tool, to keep yourself accountable and know exactly
 The time reporting works by you configuring your own activities, you can specify a number of different parameters for a newly configured activity such as the amount of time that you'd _prefer_ to spend
 on the activity everyday or if the activity is a negative activity, how much time is the _maximum_ you want to spend on it each day. 
 
+
+_I go up at around 4 - 6PM every day, and go to sleep at 8 - 10AM that's why it looks so strange_
 ![time_editor](https://github.com/JBaltimore47/tabulations/assets/139618954/fcd5b3a9-d199-4d03-8818-c5d6794b74fb)
 
 
