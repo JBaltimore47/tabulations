@@ -1,17 +1,17 @@
 Tabulations
 ===
-Tabulations is a self-improvement tool that i wrote because i was struggling a lot with staying accountable to myself and consistent in my routine, and i want a good way to see how i am progressing in my self-improvement journey.
+Tabulations is a self-improvement tool that i wrote because i was struggling a lot with staying accountable to myself and consistent in my routine, and i want a good way to see how i am progressing when it comes to putting in work to achieve my goals and avoiding activities that i consider negative and unproductive such as scrolling through Youtube or watching series. I realize that you can never be completely perfect, sometimes you're gonna have bad days, others, you're gonna make excuses, the point is to minimize those things as much as possible.
 
 
 
-it has a few different functionalities:
+the app has a few different functionalities:
 
 
 Personal time reporting
 ---
 The point here is to be able to report and then later visualize how exactly you spend your time. 
 In this day and age, it's extremely easy to waste time, one minute your taking a break from your studying and the next you've scrolled Youtube for 3 hours. 
-And that's the point of this tool, to keep yourself accountable and know exactly how you spend your time, and as a secondary side-effect: you don't want to report the fact that you threw away 3 hours doing exactly nothing, so this tool might make you less likely to do it. 
+And that's the point of this tool, to keep yourself accountable and know exactly how you spend your time, and as a secondary side-effect: you don't want to report the fact that you threw away 3 hours doing exactly nothing, and reporting the fact that you spent your time productively is like a drug in itself, i personally am addicted to filling up my days with productive activities, reporting your own time is addicting if you're spending that time doing things that you are proud of, and it feels really bad if you're spending time on things that you're not proud of, so if you commit yourself to reporting your time regardless if your productive or not then you will hack your brain into using your time better. I can without a doubt say that this has helped me a lot.  
 
 The time reporting works by you configuring your own activities, you can specify a number of different parameters for a newly configured activity such as the amount of time that you'd _prefer_ to spend
 on the activity everyday or if the activity is a negative activity, how much time is the _maximum_ you want to spend on it each day. 
