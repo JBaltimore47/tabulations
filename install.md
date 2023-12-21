@@ -23,4 +23,9 @@ sudo docker build -t tabulate-frontend:0.1 .
 docker run --detach -t --volume logs:/tmp/logs --volume $(pwd):/opt/app -p 3000:3000 --name tabulate-frontend tabulate-frontend:0.1
 ```
 
+You can encapsulate these within a systemd service and start at boot if you want, or you could just manually start it yourself:
 
+```
+sudo docker start tabulate-frontend
+sudo docker start tabulate-backend
+```
