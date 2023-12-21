@@ -30,66 +30,6 @@ import { Dashboard } from './components/dashboard.js';
 import { Phase } from './components/phase.js';
 import { Journals, JournalSingular, JournalEntry } from './components/journals.js';
 
-
-/*
-
-
-
-REFACTOR 1#:
-
-0. Rewrite and oversee the fetch calls - done
-1. Group project by pages, with related contexts in the same files - done
-
-2. Go through and simplify the code
-3. Store all the web resources locally
-4. Shove it into an electron app (?)
-
-FEATURES:
-
-- Add checklists - done
-  - Have i done my 10 pushups? etc.
-
-- A sexy time picker - done
-
-- Todo's, you can have different todo lists based on areas, projects and skills you want to advance.
-  You could have a todo list when it comes to learning math, EE or algorithms. 
-  You could have one for the features needing to be implemented in an application, etc.
-
-
-
-- Phase: Every period of my life (should) reside inside a phase, a phase is a time period associated with certain goals, maxims, strategies, methods, interests, areas of focus, and even ways of thinking.
-phases cannot really be meticulously planned out in advance, phases form as a result of previous phases, their results, and through necessity. This is what we must embody with our code. 
-Currently, i am in my ranger phase, i need to learn some skills that are necessary for me to survive and progress, i need to learn how to do all of it on my own terms while still staying in balance and not forgetting the bigger picture, it will be challenging. Phases are the way i want to structure my life.
-
-- Journals 
-
-
-- Better time graphs
-    * Default timeperiod one month until today
-    * View the different graphs available: activities, counts, checklists, times, etc.
-
-BUGS: 
-- When you resize two events directly after the other, it seems that the last one to get resized doesn't apply. 
-- When you move around an event all over the place - Across several different days after another, it sometimes duplicates
-and event deletes itself
-
-- When there is a gap in the chronological order of the timeseries (in dashboard an exception is thrown). Uncaught Error: TimeSeries was passed non-chronological events, this happens if day A is created before day B, where day B is the earlier date. 
-
-SOLUTION: filter the array first by creating an map with dayTimestamp -> dayIndex, and then doing a selectionSort(). 
-
-
-
-SOLUTION: turns out it's the server that has very slow response times (for some reason).
-To fix, either we could:
-
-- Create a view for updating multiple items at once 
-- Keep track of changes client-side and only update changed items.
-- Rewrite how it's done 
-
-
-
-*/
-
 export const BACKEND_URL = "http://127.0.0.1:8000";
 export const FRONTEND_URL = "http://127.0.0.1:3000";
 
