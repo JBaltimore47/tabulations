@@ -60,6 +60,8 @@ I primarily wrote this tool for my own use, so i am only adding new functionalit
 As it stands, the code isn't pretty, there a some bugs and a lot of functionality is missing, so i'm sorry if you're planning on reading and understanding it. The main functionality works as intended
 which is all i need.
 
+What i think is nice about this tool is a) you have full control over all activities and checklists, nothing is generic, and b) that you can use utilize only the parts of the tool you want. If you only want to report time and have a checklist, that's fine.
+
 
 
 
