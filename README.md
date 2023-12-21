@@ -30,9 +30,9 @@ Ever had a goal to do 20 pushups everyday? Or maybe you wanted to read 20 pages 
 
 Times
 ---
-Ever set a goal for yourself to go up at a specific time and go to sleep at another? Have you ever tried intermittent fasting and set a goal to only eat food after a certain time on the day. 
+Ever set a goal for yourself to go up at a specific time and go to sleep at another? Have you ever tried intermittent fasting and set a goal to only eat food after a certain time of the day. 
 This allows you to set up your own times, and then as with the other functions, you report on them. For example: i might want to go up 6AM everyday and do math, but that's not always possible,
-some times you can't sleep, some times you've stayed up all night with friends, etc. I would like keep track of and visualize how often i fail to do so. If i fail to often then i know i have to make some change in my life.
+some times you can't sleep, some times you've stayed up all night with friends, etc. I would like to keep track of and visualize how often i fail to do so. If i fail to often then i know i have to make some change in my life.
 
 Counts
 ---
